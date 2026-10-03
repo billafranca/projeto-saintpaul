@@ -1,0 +1,17 @@
+'use client'
+import Link from 'next/link'
+import { ArrowRight, BadgeCheck, CalendarDays, MapPin, ShieldCheck } from 'lucide-react'
+
+const profissionais = [
+  ['helena-duarte','Dra. Helena Duarte','Endocrinologia','CRM-SP 184.220','R$ 320'],
+  ['lucas-prado','Lucas Prado','Nutrição clínica','CRN-3 48.210','R$ 180'],
+  ['ana-martins','Dra. Ana Martins','Endocrinologia','CRM-SP 201.884','R$ 290'],
+  ['beatriz-lima','Beatriz Lima','Educação física','CREF 092.441-G/SP','R$ 150'],
+  ['carlos-souza','Dr. Carlos Souza','Endocrinologia','CRM-SP 176.310','R$ 350'],
+  ['mariana-alves','Mariana Alves','Nutrição clínica','CRN-3 52.108','R$ 200'],
+  ['paulo-reis','Paulo Reis','Educação física','CREF 081.220-G/SP','R$ 140'],
+  ['juliana-costa','Dra. Juliana Costa','Endocrinologia','CRM-SP 198.120','R$ 310'],
+  ['renata-melo','Renata Melo','Nutrição clínica','CRN-3 45.901','R$ 190'],
+  ['fernando-gomes','Dr. Fernando Gomes','Endocrinologia','CRM-SP 165.778','R$ 330'],
+]
+export default function EncontrarProfissional(){return <main className="app-shell"><div className="mx-auto min-h-screen max-w-[760px] px-5 py-6"><header className="flex items-center justify-between"><Link href="/app" className="font-display text-xl font-extrabold text-[#0b6e63]">Protea</Link><Link href="/app" className="text-sm font-semibold text-[#0b6e63]">Voltar ao app</Link></header><section className="mt-10"><p className="text-sm text-[#78928e]">Cuidado conectado em São Paulo</p><h1 className="mt-1 font-display text-3xl font-extrabold tracking-tight">Encontre um profissional</h1><p className="mt-3 max-w-xl text-sm leading-relaxed text-[#64817d]">Escolha alguém para acompanhar seu tratamento com segurança, sem promessas de resultado.</p><div className="mt-6 grid gap-3 rounded-3xl border border-[#cfe3df] bg-white p-4 md:grid-cols-4"><select className="rounded-xl border border-[#d9e8e5] bg-white p-3 text-sm"><option>São Paulo</option></select><select className="rounded-xl border border-[#d9e8e5] bg-white p-3 text-sm"><option>Especialidade</option></select><select className="rounded-xl border border-[#d9e8e5] bg-white p-3 text-sm"><option>Modalidade</option></select><button className="rounded-xl bg-[#0f9d8a] p-3 text-sm font-bold text-white">Filtrar</button></div><div className="mt-6 grid gap-3">{profissionais.map(([id,nome,esp,reg,preco])=><article key={id} className="rounded-3xl border border-[#d9e8e5] bg-white p-5 shadow-sm"><div className="flex items-start justify-between gap-4"><div><h2 className="font-display text-lg font-bold">{nome}</h2><p className="mt-1 text-sm text-[#64817d]">{esp}</p><p className="mt-2 flex items-center gap-1 text-xs text-[#78928e]"><MapPin data-icon="inline-start"/> São Paulo · {reg}</p></div><span className="flex items-center gap-1 rounded-full bg-[#e1f3ef] px-2 py-1 text-[10px] font-bold text-[#0b6e63]"><BadgeCheck data-icon="inline-start"/> Conferido</span></div><div className="mt-4 flex items-center justify-between border-t border-[#edf3f1] pt-4"><span className="text-sm font-bold text-[#0b6e63]">{preco} · teleconsulta</span><Link href={`/app/profissional/${id}`} className="flex min-h-11 items-center gap-1 rounded-xl bg-[#0b6e63] px-4 text-sm font-bold text-white">Ver perfil <ArrowRight data-icon="inline-end"/></Link></div></article>)}</div><div className="mt-6 flex gap-2 rounded-2xl border border-[#f1dfbc] bg-[#fff9ed] p-4 text-xs leading-relaxed text-[#87652b]"><ShieldCheck className="shrink-0"/> A plataforma não cobra por paciente indicado e não promete resultados.</div></section></div></main>}
