@@ -1,0 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+@import 'tailwindcss';
+:root{--bg:#eef5f4;--ink:#123b3a;--muted:#6d8986;--primary:#0f9d8a;--deep:#0b6e63;--line:#d9e8e5;--card:#fff8;}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif}button,input{font:inherit}.font-display{font-family:'Manrope',sans-serif}.app-shell{min-height:100vh;background:linear-gradient(150deg,#f4faf8 0%,#e8f2f0 100%)}.phone{width:min(100%,440px);min-height:100vh;margin:auto;background:#f8fcfb;box-shadow:0 0 60px #0b6e6312}.safe-bottom{padding-bottom:92px}.soft-card{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:0 8px 25px #0b6e6309}.gradient-card{background:linear-gradient(135deg,#0b6e63,#13a98f);color:#fff}.nav-blur{background:#ffffffea;backdrop-filter:blur(14px)}
